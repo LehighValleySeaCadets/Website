@@ -1,0 +1,58 @@
+﻿@using System.Text;
+
+
+<div class=@GetClasses() style="background-color: #003662">
+    <div class="card-body">
+        <h5 class="sc-card-title">@Title</h5>
+        @if (!string.IsNullOrEmpty(ImgSrc))
+        {
+            <img src=@ImgSrc style="width: 150px;" alt=@Alt onclick="window.open('@ImgUrl')">
+        }
+        <div class="card-text">
+            @ChildContent
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string? Alt { get; set; } = " ";
+
+    [Parameter]
+    public string? ImgSrc { get; set; }
+
+    [Parameter]
+    public string? ImgUrl { get; set; }
+
+    [Parameter]
+    [EditorRequired]
+    public string? Title { get; set; }
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    [Parameter]
+    public string? TextAlign { get; set; }
+
+    public string GetClasses()
+    {
+        var sb = new StringBuilder("card border-0 ");
+        sb.Append("col-md-4 ");
+
+        if (TextAlign is null || TextAlign.ToUpper() == "LEFT")
+        {
+            return sb.ToString();
+        }
+        else if (TextAlign.ToUpper() == "CENTER")
+        {
+            sb.Append("text-center ");
+        }
+        else if (TextAlign.ToUpper() == "RIGHT")
+        {
+            sb.Append("text-end ");
+        }
+
+        return sb.ToString();
+    }
+
+}
