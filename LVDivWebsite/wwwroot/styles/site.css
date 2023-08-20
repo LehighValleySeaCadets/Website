@@ -1,6 +1,7 @@
 ﻿@charset "UTF-8";
-div, .container {
+.sc-card-title {
   text-transform: uppercase;
+  color: #ff9e0d;
 }
 
 .sc-footer {
