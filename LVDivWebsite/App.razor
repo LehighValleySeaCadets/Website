@@ -1,4 +1,6 @@
-﻿<Router AppAssembly="@typeof(App).Assembly">
+﻿@inject NavigationManager Navigation
+
+<Router AppAssembly="@typeof(App).Assembly">
     <Found Context="routeData">
         <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
         <FocusOnNavigate RouteData="@routeData" Selector="h1" />
@@ -6,7 +8,9 @@
     <NotFound>
         <PageTitle>Not found</PageTitle>
         <LayoutView Layout="@typeof(MainLayout)">
-            <p role="alert">Sorry, there's nothing at this address.</p>
+            <h1 role="alert" style="text-align: center">MAN OVERBOARD! MAN OVERBOARD!  </h1>
+            <hr />
+            <p style="text-align: center">It appears you have drifted off course.  Please muster back at the homepage!</p>
         </LayoutView>
     </NotFound>
 </Router>

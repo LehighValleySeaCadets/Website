@@ -1,5 +1,6 @@
 ﻿@using LVDivWebsite.Components
 @inherits LayoutComponentBase
+@inject NavigationManager Navigation
 
 <div class="page">
     
@@ -31,9 +32,10 @@
         <!-- <NavMenu /> -->
     </nav>
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+    <main >
+        <div class="top-row btn-group ">
+            <button class="btn btn-primary mr-1" @onclick=WhoWeAre>Who we are</button>
+            <button class="btn btn-primary" @onclick=WhatWeDo>What we do</button>
         </div>
 
         <article class="content px-4">
@@ -42,3 +44,27 @@
     </main>
     <Footer/>
 </div>
+
+@code{
+
+
+    private void NavigateTo(string? url)
+    {
+        Navigation.NavigateTo(url);
+    }
+
+    private void RouteTo(string url)
+    {
+        Navigation.NavigateTo(url);
+    }
+
+    private void WhatWeDo()
+    {
+        Navigation.NavigateTo("what-we-do");
+    }
+
+    private void WhoWeAre()
+    {
+        Navigation.NavigateTo("who-we-are");
+    }
+}
