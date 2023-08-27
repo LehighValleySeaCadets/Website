@@ -1,6 +1,11 @@
 ﻿
 $navbar-light-color: #FFFFFF;
+// $link-color: #8ed1fc; //$primary !default;
+// $link-hover-color: shift-color($link-color, $link-shade-percentage) !default;
 
+h1 {
+    color: #003662;
+}
 .sc-card-title {
     text-transform: uppercase;
     color: #ff9e0d;
@@ -9,4 +14,9 @@ $navbar-light-color: #FFFFFF;
 .sc-footer {
     background-color: #003662;
 }
+
+.carousel-item img{
+    margin: auto;
+}
+
 @import '../node_modules/bootstrap/scss/bootstrap.scss';

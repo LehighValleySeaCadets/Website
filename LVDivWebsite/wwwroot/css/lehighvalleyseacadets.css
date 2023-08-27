@@ -7,6 +7,10 @@ h3 {
     font-weight: 500;
     line-height: 1.2;
 }
+h1 {
+
+}
+
 .sc-navbar {
     background-color: #003662 !important;
 }
@@ -14,6 +18,5 @@ h3 {
 .sc-navitem {
     text-transform: uppercase;
 }
-
 
 /*# sourceMappingURL=C:\Users\david\source\repos\SeaCadets\Website\LVDivWebsite\wwwroot\css\lehighvalleyseacadets.css.map */

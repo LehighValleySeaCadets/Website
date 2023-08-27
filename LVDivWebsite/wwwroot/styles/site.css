@@ -1,4 +1,8 @@
 ﻿@charset "UTF-8";
+h1, .h1 {
+  color: #003662;
+}
+
 .sc-card-title {
   text-transform: uppercase;
   color: #ff9e0d;
@@ -6,6 +10,10 @@
 
 .sc-footer {
   background-color: #003662;
+}
+
+.carousel-item img {
+  margin: auto;
 }
 
 /*!
