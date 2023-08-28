@@ -1,11 +1,13 @@
-﻿<div class="sc-footer ">
+﻿<footer class="sc-footer" style="margin-top: 2rem; bottom: 0;">
     <div class="container px-4 " style="margin-top: 2rem;">
         <div class="row gx-4">
-            <FooterCard Title="Contact us:">
+            <FooterCard Title="Contact us:"
+                        TextAlign="center">
                 <FooterCardText Text="Lehigh Valley Sea Cadets"/>
                 <FooterCardText Text="1400 Postal Road"/>
                 <FooterCardText Text="Allentown, PA 18109"/>
-                <a href="mailto:LVDiv042@hotmail.com" class="card-link">Email Us:</a>
+                <FooterCardText Text="484.867.7482" />
+                <a href="mailto:LVDiv042@hotmail.com" class="card-link" style="color: #ff9e0d; text-decoration: none;">Email Us</a>
             </FooterCard>
             
             <FooterCard Title="mission"
@@ -21,15 +23,16 @@
                         ImgSrc="images\fra-logo.png"
                         ImgUrl="https://www.frabranch115lv.com/"
                         Alt="Fleet Reserve Association Branch 115"
-                        TextAlign="right">
+                        TextAlign="center">
                 <FooterCardText Text="Fleet Reserve Association" />
                 <FooterCardText Text="Black Diamond Branch #115" />
-                <a href="https://www.frabranch115lv.com/" class="card-link">Website</a>
-                <a href="mailto:frabranch115@gmail.com" class="card-link">Contact</a>
+                <a href="https://www.frabranch115lv.com/" class="card-link" style="color: #ff9e0d; text-decoration: none;">Website</a>
+                <a href="mailto:frabranch115@gmail.com" class="card-link" style="color: #ff9e0d; text-decoration: none;">Contact</a>
             </FooterCard>
+            <a class="btn btn-primary" href="https://usnscc-lehigh-valley-division.square.site/" role="button">Donate</a>
         </div>
     </div>
-</div>
+</footer>
 
 @code {
 

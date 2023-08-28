@@ -1,5 +1,5 @@
 ﻿<li class="nav-item sc-navitem">
-    <a class="nav-link sc-navlink" href="#top">
+    <a class="nav-link sc-navlink" href="@Url">
         @Caption
     </a>
 </li>
@@ -8,4 +8,7 @@
 
     [Parameter]
     public string? Caption { get; set; }
+
+    [Parameter]
+    public string Url { get; set; } = "#top";
 }

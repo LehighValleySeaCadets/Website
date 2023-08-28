@@ -1,5 +1,6 @@
 ﻿@using LVDivWebsite.Components
 @inherits LayoutComponentBase
+@inject NavigationManager Navigation
 
 <div class="page">
     
@@ -20,20 +21,21 @@
             <div class="collapse navbar-collapse justify-content-end align-center"
             id="main-nav">
                 <ul class="navbar-nav">
-                    <NavLink_LVD Caption="Join" />
+                    <NavLink_LVD Caption="Join" Url="/join"/>
                     <NavLink_LVD Caption="For Parents" />
                     <NavLink_LVD Caption="Support" />
                     <NavLink_LVD Caption="Media" />
-                    <NavLink_LVD Caption="Login" />
+                    <NavLink_LVD Caption="Donate" Url="https://usnscc-lehigh-valley-division.square.site/" />
                 </ul>
             </div>
         </div>
         <!-- <NavMenu /> -->
     </nav>
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+    <main >
+        <div class="top-row btn-group ">
+            <button class="btn btn-primary mr-1" @onclick=WhoWeAre>Who we are</button>
+            <button class="btn btn-primary" @onclick=WhatWeDo>What we do</button>
         </div>
 
         <article class="content px-4">
@@ -42,3 +44,27 @@
     </main>
     <Footer/>
 </div>
+
+@code{
+
+
+    private void NavigateTo(string? url)
+    {
+        Navigation.NavigateTo(url);
+    }
+
+    private void RouteTo(string url)
+    {
+        Navigation.NavigateTo(url);
+    }
+
+    private void WhatWeDo()
+    {
+        Navigation.NavigateTo("what-we-do");
+    }
+
+    private void WhoWeAre()
+    {
+        Navigation.NavigateTo("who-we-are");
+    }
+}
