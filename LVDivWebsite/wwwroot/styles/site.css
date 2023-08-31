@@ -1,4 +1,8 @@
 ﻿@charset "UTF-8";
+body, input, textarea, select {
+  font-family: "Raleway", Helvetica, Arial, Lucida, sans-serif;
+}
+
 h1, .h1 {
   color: #003662;
 }

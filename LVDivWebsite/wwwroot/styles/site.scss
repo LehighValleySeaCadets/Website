@@ -2,6 +2,9 @@
 $navbar-light-color: #FFFFFF;
 // $link-color: #8ed1fc; //$primary !default;
 // $link-hover-color: shift-color($link-color, $link-shade-percentage) !default;
+body, input, textarea, select {
+    font-family: 'Raleway',Helvetica,Arial,Lucida,sans-serif;
+}
 
 h1 {
     color: #003662;
