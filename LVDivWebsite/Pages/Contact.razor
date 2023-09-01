@@ -1,15 +1,48 @@
 @page "/contact"
 
+<Div Class="container">
 <Heading Size=HeadingSize.Is1>Contact Us</Heading>
-<Div Position=Position.Fixed.Top.Is50>
-    <Field>
-        <FieldLabel>Name</FieldLabel>
-        <TextEdit Placeholder="Enter your name" />
+    <ul list-group list-group-flush>
+        <li class="list-group-item">
+            <Heading Size=HeadingSize.Is3><ins>Email</ins></Heading>
+            <Link To="mailto: LVDiv042@hotmail.com">LVDiv042@hotmail.com</Link>
+            <Div><hr /></Div>
+        </li>
+        <li class="list-group-item">
+            <Heading Size=HeadingSize.Is3><ins>Phone</ins></Heading>
+            <Text >484.867.7482</Text>
+            <Div><hr /></Div>
+        </li>
+        <li class="list-group-item">
+            <Heading Size=HeadingSize.Is3><ins>Form</ins></Heading>
+            <Form ElementId="contact-form">
+                <Field>
+                    <FieldLabel>Name</FieldLabel>
+                    <TextEdit Placeholder="Enter your name" />                
 
-        <FieldLabel>Email address</FieldLabel>
-        <TextEdit Placeholder="Enter email" />
-
-        <FieldLabel>Subject</FieldLabel>
-        <TextEdit Placeholder="Enter subject" />
-    </Field>
+                    <FieldLabel>Email address</FieldLabel>
+                    <TextEdit Placeholder="Enter email" />
+                    
+                    <FieldLabel>Subject</FieldLabel>
+                    <TextEdit Placeholder="Enter subject" />
+                    
+                    <FieldLabel>Message</FieldLabel>
+                    <TextEdit Placeholder="Enter your message here" />
+                </Field>
+                <Button Color="Color.Primary" 
+                        Class="g-recaptcha"
+                        data-sitekey="reCAPTCHA_site_key"
+                        data-callback="onSubmit"
+                        data-action="submit"
+                        Type="ButtonType.Submit">Submit</Button>
+                <Button Color="Color.Secondary" Type="ButtonType.Reset">Reset</Button>
+            </Form>
+        </li>
+    </ul>
 </Div>
+
+<script>
+    function onSubmit(token) {
+      document.getElementById("contact-form").submit();
+    }
+</script>
