@@ -1,0 +1,29 @@
+﻿<Link To=@To
+      Target="Target.Blank"
+      Style=@Style >
+      @Text
+</Link>
+
+@code {
+    [Parameter]
+    [EditorRequired]
+    public string? Text { get; set; }
+
+    [Parameter]
+    [EditorRequired]
+    public string? To { get; set; }
+
+    [Parameter]
+    public string BackgroundColor { get; set; } = "#003662";
+
+    [Parameter]
+    public string FontColor { get; set; } = "white";
+
+    private string Style
+    {
+        get
+        {
+            return $"text-decoration: none; text-transform: uppercase; color: { FontColor }; background-color: {BackgroundColor}; border-radius: 2.5rem; padding: 1rem;";
+        }
+    }
+}
