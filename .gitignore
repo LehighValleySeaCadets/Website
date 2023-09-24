@@ -378,3 +378,5 @@ FodyWeavers.xsd
 .vscode/launch.json
 .gitignore
 .vscode/tasks.json
+/LVDivWebsite/wwwroot/local.appsettings.json
+/LVDivWebsite/wwwroot/appsettings.Development.json
