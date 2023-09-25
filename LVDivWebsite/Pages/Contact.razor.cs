@@ -12,17 +12,17 @@ public partial class Contact : ComponentBase
 
     protected async Task Submit()
     {
-        _ = this.JSRuntime ?? throw new NullReferenceException();
+        _ = JSRuntime ?? throw new NullReferenceException();
 
-        _token = await this.JSRuntime.InvokeAsync<string>("getResponse");
+        _token = await JSRuntime.InvokeAsync<string>("getResponse");
 
         // TODO:  Create the http client in Program.cs and use DI
         var client = new HttpClient
         {
-            BaseAddress = new Uri("https://localhost:7134")
+            BaseAddress = new Uri("https://localhost:7134/")
         };
 
         // TODO:  Do something with the response
-        var response = client.GetAsync($"/api/RecaptchaVerify/{_token}");
+        var response = await client.GetAsync($"api/RecaptchaVerify/{_token}");
     }
 }
