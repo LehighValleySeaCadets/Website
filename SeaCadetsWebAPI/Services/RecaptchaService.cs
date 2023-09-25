@@ -21,8 +21,6 @@ public class RecaptchaService : IRecaptchaService
     {
         var secret = _config["Recaptcha:SecretKey"];
 
-        // var url = $"https://www.google.com/recaptcha/api/siteverify?secret={secret}&response={token}";
-
         using (_httpClient)
         {
             var httpResult = await _httpClient.GetAsync($"/recaptcha/api/siteverify?secret={secret}&response={token}");
