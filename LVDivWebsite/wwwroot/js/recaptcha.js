@@ -1,5 +1,4 @@
-﻿grecaptcha.ready(
-async function getResponse()
+﻿async function getResponse()
 {
     const response = await grecaptcha.execute('6Lc79u0nAAAAAOfSpXGcZhv-LnHO97WBBei-nHKI', { action: 'submit' }).then(function (token)
     {
@@ -9,4 +8,4 @@ async function getResponse()
     });
 
     return response;
-});
+};
