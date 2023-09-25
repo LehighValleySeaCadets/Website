@@ -1,3 +1,5 @@
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Configuration;
 using SeaCadetsWebAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
