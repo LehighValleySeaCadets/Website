@@ -34,7 +34,9 @@ public class RecaptchaHttpTrigger
                     ?? throw new Exception("An error occurred while validating the token.");
 
             log.LogInformation($"Google reCaptcha response: {response.success}, {response.score}, {response.challenge_ts}, {response.hostname}");
-            // Send an email to LVDiv with message details
+            
+            // TODO:  Refactor this code so that the contact form is called first, then submit to recaptcha, then email.
+            // Possibly use orchestration functions
         }
         catch (Exception ex)
         {
