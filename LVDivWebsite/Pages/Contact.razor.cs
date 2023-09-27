@@ -8,7 +8,8 @@ public partial class Contact : ComponentBase
 {
     private string? _token;
     private Modal? _modalRef;
-    private string _modalBodyText = "Validating form data.";
+    private bool _showSubmitText;
+    private bool _showSuccessText;
 
     [Inject]
     private HttpClient? Client { get; set; }
@@ -23,15 +24,16 @@ public partial class Contact : ComponentBase
         _ = Client ?? throw new NullReferenceException();
         _ = JSRuntime ?? throw new NullReferenceException();
 
+        _showSubmitText = true;
+        _showSuccessText = false;
+
         await _modalRef!.Show();
         _token = await JSRuntime.InvokeAsync<string>("getResponse");
-
-        // TODO:  Create the http client in Program.cs and use DI
-        // var client = new HttpClient();
-
-        // TODO:  Do something with the response
         var response = await Client.GetAsync($"api/contact/{_token}");
-        _modalBodyText = "Your form has been successfully submitted.";
+
+        _showSubmitText = false;
+        _showSuccessText = true;
+        await Task.Delay(2000);
         await _modalRef!.Hide();
     }
 }
