@@ -17,7 +17,10 @@ h1, .h1 {
 }
 
 .carousel-item img {
-  margin: auto;
+  float: left;
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
 }
 
 /*!
