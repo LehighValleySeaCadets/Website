@@ -19,8 +19,12 @@ h1 {
     background-color: #003662;
 }
 
-.carousel-item img{
-    margin: auto;
+.carousel-item img {
+    float: left;
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
 }
+
 
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
