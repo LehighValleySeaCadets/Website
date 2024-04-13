@@ -380,3 +380,4 @@ FodyWeavers.xsd
 .vscode/tasks.json
 /LVDivWebsite/wwwroot/local.appsettings.json
 /LVDivWebsite/wwwroot/appsettings.Development.json
+/Api/local.settings.json
