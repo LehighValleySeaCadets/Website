@@ -1,13 +1,8 @@
 using Api.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Azure.WebJobs;
-using Microsoft.Azure.WebJobs.Extensions.Http;
-using Microsoft.Extensions.Configuration;
+using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Net.Http;
-using System.Threading.Tasks;
 
 namespace Api;
 
@@ -20,7 +15,7 @@ public class RecaptchaHttpTrigger
         _recaptcha = recaptchaService;
     }
 
-    [FunctionName("VerifyRecaptcha")]
+    [Function("VerifyRecaptcha")]
     public async Task<IActionResult> Run(
         [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "contact/{token}")] HttpRequest req, string token, ILogger log)
     {
