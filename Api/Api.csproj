@@ -4,6 +4,7 @@
     <AzureFunctionsVersion>v4</AzureFunctionsVersion>
     <Nullable>enable</Nullable>
     <UserSecretsId>ae6592e6-bce9-4146-ae5c-f2f4419899b7</UserSecretsId>
+	<OutputType>Exe</OutputType>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="local.settings.json" />
@@ -17,9 +18,9 @@
 	  <PackageReference Include="Microsoft.Azure.Functions.Worker.ApplicationInsights" Version="1.4.0" />
 	  <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.1" />
   </ItemGroup>
-	<ItemGroup>
-		<Using Include="System.Threading.ExecutionContext" Alias="ExecutionContext" />
-	</ItemGroup>
+  <ItemGroup>
+	<Using Include="System.Threading.ExecutionContext" Alias="ExecutionContext" />
+  </ItemGroup>
   <ItemGroup>
     <None Update="host.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
