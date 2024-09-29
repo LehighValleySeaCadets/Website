@@ -3,6 +3,26 @@
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+body {
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+h1 {
+}
+
+.sc-navbar {
+    background-color: #003662 !important;
+}
+
+.sc-navitem {
+    text-transform: uppercase;
+}
 
 h1:focus {
     outline: none;
@@ -91,11 +111,11 @@ a, .btn-link {
         stroke: #e0e0e0;
         stroke-width: 0.6rem;
         -webkit-transform-origin: 50% 50%;
-            -ms-transform-origin: 50% 50%;
-                transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
         -webkit-transform: rotate(-90deg);
-            -ms-transform: rotate(-90deg);
-                transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
     }
 
         .loading-progress circle:last-child {

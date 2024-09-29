@@ -1,58 +1,101 @@
 @page "/contact"
+@using LVDivWebsite.Components
 
 <Div Class="container">
 <Heading Size=HeadingSize.Is1>Contact Us</Heading>
-    <ul list-group list-group-flush>
-        <li class="list-group-item">
-            <Heading Size=HeadingSize.Is3><ins>Email</ins></Heading>
-            <Link To="mailto: LVDiv042@hotmail.com">LVDiv042@hotmail.com</Link>
-            <Div><hr /></Div>
-        </li>
-        <li class="list-group-item">
-            <Heading Size=HeadingSize.Is3><ins>Phone</ins></Heading>
-            <Text >484.867.7482</Text>
-            <Div><hr /></Div>
-        </li>
-        <li class="list-group-item">
-            <Heading Size=HeadingSize.Is3><ins>Form</ins></Heading>
-            <Form ElementId="contact-form">
-                <Field>
-                    <FieldLabel>Name</FieldLabel>
-                    <TextEdit Placeholder="Enter your name" />                
-
-                    <FieldLabel>Email address</FieldLabel>
-                    <TextEdit Placeholder="Enter email" />
-                    
-                    <FieldLabel>Subject</FieldLabel>
-                    <TextEdit Placeholder="Enter subject" />
-                    
-                    <FieldLabel>Message</FieldLabel>
-                    <TextEdit Placeholder="Enter your message here" />
-                </Field>
-                <Button Color="Color.Primary" 
-                        Class="g-recaptcha"
-                        Clicked="Submit"
-                        Type="ButtonType.Button">Submit</Button>
-                <Button Color="Color.Secondary" Type="ButtonType.Reset">Reset</Button>
-            </Form>
-        </li>
-    </ul>
-        <Modal @ref=_modalRef>
-            <ModalContent Centered>
-                <ModalHeader>
-                    <ModalTitle>Forwarding your request up the Chain of Command</ModalTitle>
-                    <CloseButton />
-                </ModalHeader>
-                <ModalBody>
-                    <Text>Validating form data.</Text>
-                    <SpinKit Centered Size="40px" Type="SpinKitType.Chase" Color="#fe9e0d" />
-                </ModalBody>
-            </ModalContent>
-        </Modal>
+    <CardDeck>
+        <Card>
+            <CardBody>
+                <CardTitle Size="3" TextAlignment="TextAlignment.Center">E-mail</CardTitle>
+                <CardText TextAlignment="TextAlignment.Center">
+                    <Icon Name="IconName.Mail" Size="2x" /><br />
+                    <Link To="mailto:LVDiv042@hotmail.com">LVDiv042@hotmail.com</Link>
+                </CardText>
+            </CardBody>
+        </Card>
+        <Card>
+            <CardBody>
+                <CardTitle Size="3" TextAlignment="TextAlignment.Center">Phone</CardTitle>
+                <CardText TextAlignment="TextAlignment.Center">
+                    <Icon Name="@("fa-phone")" Size="2x" /><br />
+                    <Link To="tel:4848677482">484-867-7482</Link>
+                </CardText>
+            </CardBody>
+        </Card>
+        <div class="text-center" style="margin-top: 1rem;">
+        <div class="row">
+            <div class="col-sm" style="background-color: #fe9e0d;">
+               <h2 style="color: white; margin-top: 1rem;">
+                    Become a Cadet
+               </h2>
+                <div style="color: white; margin-bottom: 4rem;">
+                   <p>
+                        Join the U.S. Naval Sea Cadet
+                        Corps and experience true
+                        adventure and camaraderie. You
+                        will be amazed at what you can
+                        accomplish when you chart your
+                        course, pursue your vision and
+                        become part of our cadet corps.
+                        Visit www.seacadets.org to find a
+                        unit near you.
+                   </p>
+                    <Strong>Clicking the below link will bring you to our National HQ site.</Strong><br /><br />
+                    <ButtonLink Text="Click to Join"
+                                To="https://magellan.seacadets.org/referral.aspx"
+                                BackgroundColor="#003662"
+                                FontColor="white" />
+                </div>
+            </div>
+            <div class="col-sm" style="background-color: #FFFFFF;">
+                <h2 style="color: #003662; margin-top: 1rem;">
+                    Become a Volunteer
+                </h2>
+                <div style="color: #003662; margin-bottom: 4rem;">
+                    <p>
+                        Our volunteers are the muscle
+                        of our program, committed
+                        to providing challenging and
+                        engaging training around the
+                        country. Whether you can make a
+                        monthly commitment of 30 hours
+                        or two hours, you will make a
+                        difference in the lives of young
+                        people.
+                    </p>
+                    <Strong>Clicking the below link will bring you to our National HQ site.</Strong><br /><br />
+                    <ButtonLink To="https://magellan.seacadets.org/referral.aspx?rType=V"
+                                Text="Click to Join" 
+                                BackgroundColor="#fe9e0d"
+                                FontColor="#003662" />
+                </div>
+            </div>
+            <div class="col-sm" style="background-color: #003662;">
+                <h2 style="color: white; margin-top: 1rem;">
+                        Become a Supporter
+                </h2>
+                <div style="color: white; margin-bottom: 4rem;">
+                    <p>
+                        Need a reason to support the U.S.
+                        Naval Sea Cadet Corps? We have
+                        thousands of them. Your generous
+                        donations directly support the
+                        cadets of your U.S. Naval Sea
+                        Cadet Corps by giving them the
+                        tools, training and mentoring
+                        they need to pursue their dreams.
+                        Please go to www.seacadets.org to
+                        make an investment in America’s
+                        future leaders.
+                    </p>
+                    <Strong>Clicking the below link will bring you to our Square site.</Strong><br /><br />
+                    <ButtonLink To="https://usnscc-lehigh-valley-division.square.site/"
+                                Text="Donate"
+                                BackgroundColor="#fe9e0d"
+                                FontColor="#003662" />
+                </div>
+            </div>
+        </div>
+    </div>
+    </CardDeck>
 </Div>
-
-<script>
-    function onSubmit(token) {
-      document.getElementById("contact-form").submit();
-    }
-</script>
