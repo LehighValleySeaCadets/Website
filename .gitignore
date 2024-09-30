@@ -13,9 +13,9 @@
 # Ignore node_modules directory
 node_modules/
 
-# # Ignore compiled CSS files in the styles folder
-# LVDivWebsite/wwwroot/styles/*.css
-# LVDivWebsite/wwwroot/styles/*.css.map
+# Ignore compiled CSS files in the styles folder
+LVDivWebsite/wwwroot/styles/*.css
+LVDivWebsite/wwwroot/styles/*.css.map
 
 # Ignore build artifacts
 dist/
@@ -399,5 +399,5 @@ FodyWeavers.xsd
 /LVDivWebsite/wwwroot/local.appsettings.json
 /LVDivWebsite/wwwroot/appsettings.Development.json
 /Api/local.settings.json
-# /LVDivWebsite/wwwroot/styles/site.css
-# /LVDivWebsite/wwwroot/styles/site.min.css
+/LVDivWebsite/wwwroot/styles/site.css
+/LVDivWebsite/wwwroot/styles/site.min.css
