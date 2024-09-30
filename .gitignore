@@ -13,9 +13,9 @@
 # Ignore node_modules directory
 node_modules/
 
-# Ignore compiled CSS files
-*.css
-*.css.map
+# Ignore compiled CSS files in the styles folder
+styles/*.css
+styles/*.css.map
 
 # Ignore build artifacts
 dist/
