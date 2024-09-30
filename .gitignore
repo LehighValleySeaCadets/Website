@@ -14,8 +14,8 @@
 node_modules/
 
 # Ignore compiled CSS files in the styles folder
-styles/*.css
-styles/*.css.map
+LVDivWebsite/wwwroot/styles/*.css
+LVDivWebsite/wwwroot/styles/*.css.map
 
 # Ignore build artifacts
 dist/
