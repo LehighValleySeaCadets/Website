@@ -22,6 +22,7 @@
     <PackageReference Include="Blazorise.Bootstrap" Version="1.6.1" />
     <PackageReference Include="Blazorise.Icons.FontAwesome" Version="1.6.1" />
     <PackageReference Include="Blazorise.SpinKit" Version="1.6.1" />
+    <PackageReference Include="BuildWebCompiler2022" Version="1.14.10" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.8" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.8" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
