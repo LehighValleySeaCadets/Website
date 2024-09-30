@@ -10,6 +10,15 @@ body, input, textarea, select {
 h1 {
     color: #003662;
 }
+
+.nav-link:hover {
+    color: #F7941E !important;
+}
+
+.nav-link.active {
+    color: #808285 !important;
+}
+
 .sc-card-title {
     text-transform: uppercase;
     color: #ff9e0d;
@@ -17,6 +26,10 @@ h1 {
 
 .sc-footer {
     background-color: #003662;
+}
+
+.sc-navlink {
+    color: #ff9e0d;
 }
 
 .carousel-item img {
