@@ -399,3 +399,5 @@ FodyWeavers.xsd
 /LVDivWebsite/wwwroot/local.appsettings.json
 /LVDivWebsite/wwwroot/appsettings.Development.json
 /Api/local.settings.json
+/LVDivWebsite/wwwroot/styles/site.css
+/LVDivWebsite/wwwroot/styles/site.min.css
