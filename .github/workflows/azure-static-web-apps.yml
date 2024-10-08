@@ -30,7 +30,9 @@ jobs:
 
       # Install project dependencies
       - name: Install Dependencies
-        run: npm install
+        run: |
+            cd wwwroot
+            npm install
 
       # Compile SCSS to CSS
       - name: Compile SCSS
