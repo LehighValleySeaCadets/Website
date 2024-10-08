@@ -30,7 +30,7 @@ jobs:
 
       # Compile SCSS to CSS
       - name: Compile SCSS
-        run: sass path/to/your/input.scss path/to/your/output.css
+        run: sass ./LVDivWebsite/wwwroot/styles/site.scss ./LVDivWebsite/wwwroot/styles/site.css
 
       - name: Build And Deploy
         id: builddeploy
