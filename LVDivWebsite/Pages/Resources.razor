@@ -3,29 +3,95 @@
 <Heading Size="HeadingSize.Is1">Resources</Heading>
 <Card>
     <CardTitle style="font-weight: bold;">Location</CardTitle>
-    <CardText>
-        The Lehigh Valley Sea Cadets conduct drill at <Link To="https://maps.app.goo.gl/6u9nwgYPa3SYj7RW8"> 
-            DeSales University, 2755 Station Avenue, Center Valley, PA 18034</Link>
-    </CardText>
+    <CardBody>
+        <Accordion>
+            <AccordionItem @bind-Visible=@locationVisible>
+                <AccordionHeader>
+                    <AccordionToggle>
+                        <Heading Size="HeadingSize.Is4">Location</Heading>
+                    </AccordionToggle>
+                </AccordionHeader>
+                <AccordionBody>
+                    The Lehigh Valley Sea Cadets conduct drill at <Link To="https://maps.app.goo.gl/6u9nwgYPa3SYj7RW8">
+                    DeSales University, 2755 Station Avenue, Center Valley, PA 18034</Link>
+                </AccordionBody>
+            </AccordionItem>
+            <AccordionItem @bind-Visible=@nlccVisible>
+                <AccordionHeader>
+                    <AccordionToggle>
+                        <Heading Size="HeadingSize.Is4">Naval League Cadet Corps (Ages 10 - 13)</Heading>
+                    </AccordionToggle>
+                </AccordionHeader>
+                <AccordionBody>
+                    <ul>
+                        <li>
+                            To join the NLCC, one must be 10 years old and have
+                            started fifth grade.
+                        </li>
+                        <li>
+                            League Cadets may remain in the NLCC through the end of eighth
+                            grade regardless of age.
+                        </li>
+                        <li>
+                            Cadets are required to maintain a 75% drill attendance.  Drill is conducted September through June.
+                            Each drill weekend consists of 4 drill periods for a total of 40 drills per year.
+                        </li>
+                        <li>
+                            Cadets are required to maintain a 'C' average grade in school to remain eligible for the Sea Cadets.
+                        </li>
+                        <li>
+                            A medical examination similar to a high school sports physical
+                            is required for all Cadet Applicants to the Naval Sea Cadet Corps
+                            (NSCC) or Navy League Cadet Corps (NLCC). No one will be denied
+                            admission to the NSCC/NLCC due to a medical disability. Where a medical
+                            condition precludes full, unlimited participation, a Request for Accommodation
+                            (NSCADM015) may be presented by the parent or guardian for review so the Cadet may
+                            participate in NSCC activities to the maximum extent possible.
+                        </li>
+                    </ul>
+                </AccordionBody>
+            </AccordionItem>
+            <AccordionItem @bind-Visible=@nsccVisible>
+                <AccordionHeader>
+                    <AccordionToggle>
+                        <Heading Size="HeadingSize.Is4">Naval Sea Cadet Corps (Ages 13 - 18)</Heading>
+                    </AccordionToggle>
+                </AccordionHeader>
+                <AccordionBody>
+                    <ul>
+                        <li>
+                            To join the NSCC, one must be 13 and have reached March 1st of their eighth-grade
+                            year.
+                        </li>
+                        <li>
+                            Cadets may remain in the program until their 19th birthday or the end of the summer
+                            following high school graduation, whichever comes first.
+                        </li>
+                        <li>
+                            Cadets are required to maintain a 75% drill attendance.  Drill is conducted September through June.
+                            Each drill weekend consists of 4 drill periods for a total of 40 drills per year.
+                        </li>
+                        <li>
+                            Cadets are required to maintain a 'C' average grade in school to remain eligible for the Sea Cadets.
+                        </li>
+                        <li>
+                            A medical examination similar to a high school sports physical
+                            is required for all Cadet Applicants to the Naval Sea Cadet Corps
+                            (NSCC) or Navy League Cadet Corps (NLCC). No one will be denied
+                            admission to the NSCC/NLCC due to a medical disability. Where a medical
+                            condition precludes full, unlimited participation, a Request for Accommodation
+                            (NSCADM015) may be presented by the parent or guardian for review so the Cadet may
+                            participate in NSCC activities to the maximum extent possible.
+                        </li>
+                    </ul>
+                </AccordionBody>
+            </AccordionItem>
+        </Accordion>
+    </CardBody>
 </Card>
-<Card>
-    <CardTitle style="font-weight: bold;">Requirements</CardTitle>
-        <ul>
-            <li>
-                Cadets are required to maintain a 75% drill attendance.  Drill is conducted September through June.
-                Each drill weekend consists of 4 drill periods for a total of 40 drills per year.
-            </li>
-            <li>
-                Cadets are required to maintain a 'C' average grade in school to remain eligible for the Sea Cadets.
-            </li>
-            <li>
-                A medical examination similar to a high school sports physical 
-                is required for all Cadet Applicants to the Naval Sea Cadet Corps
-                (NSCC) or Navy League Cadet Corps (NLCC). No one will be denied 
-                admission to the NSCC/NLCC due to a medical disability. Where a medical 
-                condition precludes full, unlimited participation, a Request for Accommodation 
-                (NSCADM015) may be presented by the parent or guardian for review so the Cadet may 
-                participate in NSCC activities to the maximum extent possible. 
-            </li>
-        </ul>
-</Card>
+
+@code{
+    bool locationVisible = true;
+    bool nlccVisible = true;
+    bool nsccVisible = true;
+}
