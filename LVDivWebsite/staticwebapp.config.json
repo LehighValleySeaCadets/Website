@@ -8,5 +8,12 @@
       "rewrite": "/index.html",
       "statusCode": 200
     }
-  }
+  },
+  "routes": [
+    {
+      "route": "/",
+      "redirect": "/index.html",
+      "statusCode": 301
+    }
+  ]
 }
